@@ -30,12 +30,7 @@
 
     let resultComputer = getComputerChoice();
    
-   
-//If the user input is "Rock" and the computers selection is "Scissors" show "You Win!"
-
-
-
-//If the user input is "Rock" and the computers selection is "Paper" show "You Lose!"
-//If the user input is "Rock" and the computers selection is "Rock" show "It's A Draw!"
-// Repeat the above 3 steps for user input of "Scissors" and "Paper"
+// If the user's choice is "Rock" output "win", "lose" or "draw" depending on computerChoice.
+// If the user's choice is "Paper" output "win", "lose" or "draw" depending on computerChoice.
+// If the user's choice is "Scissors" output "win", "lose" or "draw" depending on computerChoice.
 // When finished add button to play again

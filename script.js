@@ -31,6 +31,18 @@
     let resultComputer = getComputerChoice();
    
 // If the user's choice is "Rock" output "win", "lose" or "draw" depending on computerChoice.
+
+    if (playerSelection == "Rock") {
+        if (resultComputer == ("scissors")) {
+            console.log("You win! Rock beats Scissors.");
+        } else if (resultComputer == "Rock") {
+            console.log("You draw! You both picked Rock.");
+        } else {
+            console.log("You Lose! Paper beats Rock.");
+        }
+    };
+    
+
 // If the user's choice is "Paper" output "win", "lose" or "draw" depending on computerChoice.
 // If the user's choice is "Scissors" output "win", "lose" or "draw" depending on computerChoice.
 // When finished add button to play again

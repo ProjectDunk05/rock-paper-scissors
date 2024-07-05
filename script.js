@@ -1,16 +1,15 @@
 //When a user inputs "Rock", "Paper" or "Scissors"
 
-    let userInput = prompt("Please enter Rock, Paper or Scissors");
-
-    function capitalise(str) {
-        return ((str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()));
-    };
-
     function getPlayerSelection() {
+        let userInput = prompt("Please enter Rock, Paper or Scissors");
         return capitalise(userInput);
     };
 
     let playerSelection = getPlayerSelection();
+
+    function capitalise(str) {
+        return ((str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()));
+    };
 //Generate a random computers selection of "Rock","Paper" or "Scissors"
  
    function getRandomInteger() {

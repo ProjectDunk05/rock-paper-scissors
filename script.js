@@ -1,3 +1,7 @@
+let humanScore = 0
+let computerScore = 0
+
+
 //When a user inputs "Rock", "Paper" or "Scissors"
 
     function getPlayerSelection() {
@@ -34,10 +38,12 @@
     if (playerSelection == "Rock") {
         if (resultComputer == ("Scissors")) {
             console.log("You win! Rock beats Scissors.");
+            humanScore = humanScore + 1;
         } else if (resultComputer == "Rock") {
             console.log("You draw! You both picked Rock.");
         } else {
             console.log("You Lose! Paper beats Rock.");
+            computerScore = computerScore + 1;
         }
     };
     
@@ -46,10 +52,12 @@
     if (playerSelection == "Paper") {
         if (resultComputer == ("Rock")) {
             console.log("You win! Paper beats Rock.");
+            humanScore = humanScore + 1;
         } else if (resultComputer == "Rock") {
             console.log("You draw! You both picked Paper.");
         } else {
             console.log("You Lose! Scissors beats Paper.");
+            computerScore = computerScore + 1;
         }
     };
 
@@ -58,11 +66,15 @@
 if (playerSelection == "Scissors") {
     if (resultComputer == ("Paper")) {
         console.log("You win! Scissors beats Paper.");
+        humanScore = humanScore + 1;
     } else if (resultComputer == "Scissors") {
         console.log("You draw! You both picked Scissors.");
     } else {
         console.log("You Lose! Rock beats Scissors.");
+        computerScore = computerScore + 1;
     }
 };
+
+
 
 // When finished add button to play again

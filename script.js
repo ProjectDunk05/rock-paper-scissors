@@ -1,3 +1,4 @@
+//Declare score variables
 let humanScore = 0
 let computerScore = 0
 
@@ -8,8 +9,6 @@ let computerScore = 0
         let userInput = prompt("Please enter Rock, Paper or Scissors");
         return capitalise(userInput);
     };
-
-    let playerSelection = getPlayerSelection();
 
     function capitalise(str) {
         return ((str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()));
@@ -31,8 +30,12 @@ let computerScore = 0
         }
     };
 
-    let resultComputer = getComputerChoice();
-   
+ //Create a function to play a single round 
+ 
+    function playRound(playerChoice, computerSelection) {
+        let playerSelection = getPlayerSelection();
+        let resultComputer = getComputerChoice();
+    
 // If the user's choice is "Rock" output "win", "lose" or "draw" depending on computerChoice.
 
     if (playerSelection == "Rock") {
@@ -75,6 +78,12 @@ if (playerSelection == "Scissors") {
     }
 };
 
+console.log(`Player:${humanScore} Computer:${computerScore}`);
+    };
 
+let playerSelection = getPlayerSelection();
+let resultComputer = getComputerChoice();
+
+playRound(playerSelection, resultComputer)
 
 // When finished add button to play again

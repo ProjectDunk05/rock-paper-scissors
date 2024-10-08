@@ -81,9 +81,11 @@ if (playerSelection == "Scissors") {
 console.log(`Player:${humanScore} Computer:${computerScore}`);
     };
 
-let playerSelection = getPlayerSelection();
-let resultComputer = getComputerChoice();
+// Add function to play a game that consists of 5 rounds
 
-playRound(playerSelection, resultComputer)
-
-// When finished add button to play again
+function playGame(playerChoice, computerSelection) {
+    const times = 5;
+    for(let i = 0; i < times; i++) {
+playRound(playerSelection, resultComputer);
+    };
+}

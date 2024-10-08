@@ -1,8 +1,7 @@
 //Declare score variables
 let humanScore = 0
 let computerScore = 0
-
-
+let round = 0
 //When a user inputs "Rock", "Paper" or "Scissors"
 
     function getPlayerSelection() {
@@ -35,7 +34,7 @@ let computerScore = 0
     function playRound(playerChoice, computerSelection) {
         let playerSelection = getPlayerSelection();
         let resultComputer = getComputerChoice();
-    
+        round = round + 1
 // If the user's choice is "Rock" output "win", "lose" or "draw" depending on computerChoice.
 
     if (playerSelection == "Rock") {
@@ -78,12 +77,15 @@ if (playerSelection == "Scissors") {
     }
 };
 
-console.log(`Player:${humanScore} Computer:${computerScore}`);
+console.log(`Round:${round} Player:${humanScore} Computer:${computerScore}`);
     };
 
 // Add function to play a game that consists of 5 rounds
 
 function playGame(playerChoice, computerSelection) {
+    let resultComputer = getComputerChoice();
+    let playerSelection = getPlayerSelection();
+
     const times = 5;
     for(let i = 0; i < times; i++) {
 playRound(playerSelection, resultComputer);

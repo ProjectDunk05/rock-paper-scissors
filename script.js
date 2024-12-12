@@ -4,14 +4,15 @@ let computerScore = 0
 let round = 0
 //When a user inputs "Rock", "Paper" or "Scissors"
 
-    function getPlayerSelection() {
+    //function getPlayerSelection() {
         //let userInput = prompt("Please enter Rock, Paper or Scissors");
        // return capitalise(userInput);
-    };
+    //};
 
     //function capitalise(str) {
         //return ((str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()));
     //};
+    
 //Generate a random computers selection of "Rock","Paper" or "Scissors"
  
    function getRandomInteger() {
@@ -30,20 +31,24 @@ let round = 0
     };
 
  //Create a function to play a single round 
- 
-    function playRound(playerChoice, computerSelection) {
-        let playerSelection = getPlayerSelection();
-        let resultComputer = getComputerChoice();
+    let resultComputer 
+    let roundResult
+    function playRound(playerSelection,resultComputer) {
+        
         round = round + 1
+       
 // If the user's choice is "Rock" output "win", "lose" or "draw" depending on computerChoice.
 
     if (playerSelection == "Rock") {
         if (resultComputer == ("Scissors")) {
+            roundResult = "Win"
             console.log("You win! Rock beats Scissors.");
             humanScore = humanScore + 1;
         } else if (resultComputer == "Rock") {
+            roundResult = "Draw"
             console.log("You draw! You both picked Rock.");
         } else {
+            roundResult = "Lose"
             console.log("You Lose! Paper beats Rock.");
             computerScore = computerScore + 1;
         }
@@ -101,13 +106,19 @@ console.log(`Round:${round} Player:${humanScore} Computer:${computerScore}`);
 
         switch(target.id) {
             case "rock":
-                alert("Rock");
+                playerSelection = "Rock";
+                resultComputer = getComputerChoice();
+                playRound(playerSelection, resultComputer);
                 break;
             case "paper":
-                 alert("Paper");
+                playerSelection = "Paper";
+                resultComputer = getComputerChoice();
+                playRound(playerSelection, resultComputer);
                 break;
             case "scissors":
-                alert("Scissors");
+                playerSelection = "Scissors";
+                resultComputer = getComputerChoice();
+                playRound(playerSelection, resultComputer);
                 break;
         }
     });

@@ -4,14 +4,29 @@ let computerScore = 0
 let round = 0
 //When a user inputs "Rock", "Paper" or "Scissors"
 
-    //function getPlayerSelection() {
-        //let userInput = prompt("Please enter Rock, Paper or Scissors");
-       // return capitalise(userInput);
-    //};
+    let buttons = document.querySelector("#buttons");
 
-    //function capitalise(str) {
-        //return ((str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()));
-    //};
+    buttons.addEventListener("click", (event) => {
+        let target = event.target;
+
+        switch(target.id) {
+            case "rock":
+                playerSelection = "Rock";
+                resultComputer = getComputerChoice();
+                playRound(playerSelection, resultComputer);
+                break;
+            case "paper":
+                playerSelection = "Paper";
+                resultComputer = getComputerChoice();
+                playRound(playerSelection, resultComputer);
+                break;
+            case "scissors":
+                playerSelection = "Scissors";
+                resultComputer = getComputerChoice();
+                playRound(playerSelection, resultComputer);
+                break;
+        }
+    });
     
 //Generate a random computers selection of "Rock","Paper" or "Scissors"
  
@@ -82,6 +97,7 @@ if (playerSelection == "Scissors") {
     }
 };
 
+roundCounter.textContent = "Round: " + round;
 console.log(`Round:${round} Player:${humanScore} Computer:${computerScore}`);
     };
 
@@ -97,28 +113,8 @@ console.log(`Round:${round} Player:${humanScore} Computer:${computerScore}`);
    // };
 //}
 
-// Click event handlers for the three buttons
+// Update round counter after each round
 
-    let buttons = document.querySelector("#buttons");
+    let roundCounter = document.querySelector("#roundCounter");
 
-    buttons.addEventListener("click", (event) => {
-        let target = event.target;
-
-        switch(target.id) {
-            case "rock":
-                playerSelection = "Rock";
-                resultComputer = getComputerChoice();
-                playRound(playerSelection, resultComputer);
-                break;
-            case "paper":
-                playerSelection = "Paper";
-                resultComputer = getComputerChoice();
-                playRound(playerSelection, resultComputer);
-                break;
-            case "scissors":
-                playerSelection = "Scissors";
-                resultComputer = getComputerChoice();
-                playRound(playerSelection, resultComputer);
-                break;
-        }
-    });
+    

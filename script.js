@@ -1,7 +1,12 @@
-//Declare score variables
-let humanScore = 0
-let computerScore = 0
-let round = 0
+//Declare variables
+    let humanScore = 0
+    let computerScore = 0
+    let round = 0
+    let roundResult 
+    let resultComputer
+    let roundCounter = document.querySelector("#roundCounter");
+    let roundResultPara = document.querySelector("#roundResult");
+
 //When a user inputs "Rock", "Paper" or "Scissors"
 
     let buttons = document.querySelector("#buttons");
@@ -46,8 +51,7 @@ let round = 0
     };
 
  //Create a function to play a single round 
-    let resultComputer 
-    let roundResult
+    
     function playRound(playerSelection,resultComputer) {
         
         round = round + 1
@@ -56,15 +60,12 @@ let round = 0
 
     if (playerSelection == "Rock") {
         if (resultComputer == ("Scissors")) {
-            roundResult = "Win"
-            console.log("You win! Rock beats Scissors.");
+            roundResult = "You Win! Rock beats Scissors.";
             humanScore = humanScore + 1;
         } else if (resultComputer == "Rock") {
-            roundResult = "Draw"
-            console.log("You draw! You both picked Rock.");
+            roundResult = "You Draw! You both picked Rock.";
         } else {
-            roundResult = "Lose"
-            console.log("You Lose! Paper beats Rock.");
+            roundResult = "You Lose! Paper beats Rock.";
             computerScore = computerScore + 1;
         }
     };
@@ -73,48 +74,33 @@ let round = 0
 
     if (playerSelection == "Paper") {
         if (resultComputer == ("Rock")) {
-            console.log("You win! Paper beats Rock.");
+            roundResult = "You Win! Paper beats Rock."
             humanScore = humanScore + 1;
         } else if (resultComputer == "Rock") {
-            console.log("You draw! You both picked Paper.");
+            roundResult = "You Draw! You both picked Paper.";
         } else {
-            console.log("You Lose! Scissors beats Paper.");
+            roundResult = "You Lose! Scissors beats Paper.";
             computerScore = computerScore + 1;
         }
     };
 
 // If the user's choice is "Scissors" output "win", "lose" or "draw" depending on computerChoice.
 
-if (playerSelection == "Scissors") {
-    if (resultComputer == ("Paper")) {
-        console.log("You win! Scissors beats Paper.");
-        humanScore = humanScore + 1;
-    } else if (resultComputer == "Scissors") {
-        console.log("You draw! You both picked Scissors.");
-    } else {
-        console.log("You Lose! Rock beats Scissors.");
-        computerScore = computerScore + 1;
-    }
-};
-
-roundCounter.textContent = "Round: " + round;
-console.log(`Round:${round} Player:${humanScore} Computer:${computerScore}`);
+    if (playerSelection == "Scissors") {
+        if (resultComputer == ("Paper")) {
+            roundResult = "You Win! Scissors beats Paper."
+            humanScore = humanScore + 1;
+        } else if (resultComputer == "Scissors") {
+            roundResult = "You Draw! You both picked Scissors.";
+        } else {
+            roundResult = "You Lose! Rock beats Scissors.";
+            computerScore = computerScore + 1;
+        }
     };
 
-// Add function to play a game that consists of 5 rounds
-
-//function playGame(playerChoice, computerSelection) {
-   // let resultComputer = getComputerChoice();
-    //let playerSelection = getPlayerSelection();
-
-    //const times = 5;
-    //for(let i = 0; i < times; i++) {
-//playRound(playerSelection, resultComputer);
-   // };
-//}
-
-// Update round counter after each round
-
-    let roundCounter = document.querySelector("#roundCounter");
-
+// update round counter and round result
     
+    roundCounter.textContent = "Round: " + round;
+    roundResultPara.textContent = roundResult;
+   
+    };

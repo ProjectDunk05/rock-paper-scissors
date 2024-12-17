@@ -1,0 +1,24 @@
+:root {
+    --clr-light: #f8f5ee;
+    --clr-dark: #311c17;
+    --clr-copper200: #ddccab;
+    --clr-copper300: #c9aa7b;
+    --clr-copper400: #b88f57;
+    --clr-copper500: #a97c49;
+    --clr-copper600: #91633d;
+    --clr-copper700: #7b4f36;
+    --clr-copper800: #633f30;
+    --clr-copper900: #56372d;
+}
+
+* {
+    margin: 0;
+    line-height: calc(1em + 0.5rem);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:  "General Sans", sans-serif;
+}

@@ -6,7 +6,8 @@
     let resultComputer
     let roundCounter = document.querySelector("#roundCounter");
     let roundResultPara = document.querySelector("#roundResult");
-    let scoreboard = document.querySelector("#scoreboard");
+    let playerScoreboard = document.querySelector("#playerScore");
+    let computerScoreboard = document.querySelector("#computerScore");
 
 //When a user inputs "Rock", "Paper" or "Scissors"
 
@@ -103,6 +104,6 @@
     
     roundCounter.textContent = "Round: " + round;
     roundResultPara.textContent = roundResult;
-    scoreboard.textContent = "Player: " + humanScore + " Computer: " + computerScore;
-   
+    playerScoreboard.textContent = "Player: " + humanScore;
+    computerScoreboard.textContent = "Computer: " + computerScore;
     };

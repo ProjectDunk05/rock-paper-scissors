@@ -21,6 +21,7 @@ html {
 
 body {
     font-family:  "General Sans", sans-serif;
+    background-color: var(--clr-copper300);
 }
 
 .container {
@@ -30,6 +31,8 @@ body {
     margin-bottom: 1.0rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
   
   /* 2xl */
@@ -73,3 +76,49 @@ body {
       width: 100%;
     }
   }
+
+  .header {
+    text-align: center;
+    color: var(--clr-light);
+  }
+
+  .information {
+    display: flex;
+    justify-content: center;
+    color: var(--clr-light);
+  }
+
+  .instructions {
+    display: flex;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 12ch;
+    background-color: var(--clr-copper200);
+    color: var(--clr-copper700);
+    border: solid 0.125rem;
+    border-color: var(--clr-copper700);
+  }
+  
+ .scoreboard {
+  background-color: var(--clr-copper700);
+  color: var(--clr-light);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: solid 0.125rem;
+  border-color: var(--clr-copper200);
+ }
+
+ .buttons {
+  display: flex;
+  justify-content: space-around;
+ }
+
+ .result {
+  text-align: center;
+ }
+
+ button {
+  background-color: var(--clr-copper200);
+  color: var(--clr-copper700);
+ }

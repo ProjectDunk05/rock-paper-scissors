@@ -78,7 +78,7 @@
         if (resultComputer == ("Rock")) {
             roundResult = "You Win! Paper beats Rock."
             humanScore = humanScore + 1;
-        } else if (resultComputer == "Rock") {
+        } else if (resultComputer == "Paper") {
             roundResult = "You Draw! You both picked Paper.";
         } else {
             roundResult = "You Lose! Scissors beats Paper.";
